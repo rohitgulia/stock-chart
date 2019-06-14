@@ -25,6 +25,7 @@ import {
 import './styles.css';
 
 // example data
+
 const exampleStocks = [
   { name: '2018-10-01', AAPL: 4000, MSFT: 2400, GOOGL: 2400 },
   { name: '2018-10-02', AAPL: 3000, MSFT: 1398, GOOGL: 2210 },
