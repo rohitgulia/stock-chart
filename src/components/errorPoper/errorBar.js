@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Errorbar({ msg, show }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(show);
-  const [errorMsg, setErrorMsg] = React.useState(msg);
+  const [errorMsg] = React.useState(msg);
 
   function handleClose(event, reason) {
     if (reason === 'clickaway') {

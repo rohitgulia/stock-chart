@@ -8,14 +8,21 @@
     "@material-ui/core": "4.1.1",
     "@material-ui/icons": "4.2.0",
     "axios": "0.18.0",
+    "axios-mock-adapter": "^1.16.0",
     "randomcolor": "^0.5.4",
-    "react": "16.8.4",
+    "react": "16.9.0-alpha.0",
     "react-bootstrap": "0.32.4",
-    "react-dom": "16.8.4",
+    "react-dom": "16.9.0-alpha.0",
+    "react-hooks-testing-library": "^0.5.1",
     "react-scripts": "2.0.3",
     "recharts": "1.3.6"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@testing-library/react": "^8.0.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "react-test-renderer": "16.9.0-alpha.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
