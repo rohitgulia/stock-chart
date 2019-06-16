@@ -1,18 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import apiCaller from './stockApiCaller.js';
 
-// this hook handles input change and error msg updates
+// this hook handles input change
 export default function InputChangeProcessor() {
-  const [inputValue, setInputValue] = useState('AAPL,MSFT,GOOGL');
-  const [textChangeTimeout, setTextChangeTimeout] = useState();
+  const [inputValue, setInputValue] = useState('GOOGL,FB');
   const { rawApiData, errorMsg, callApi } = apiCaller();
+  const [textChangeTimeout, setTextChangeTimeout] = useState();
   const handleChange = (e) => {
     setInputValue(e.currentTarget.value.toUpperCase());
   };
 
   useEffect(() => {
     clearTimeout(textChangeTimeout);
-
     setTextChangeTimeout(
       setTimeout(() => {
         callApi(inputValue);
@@ -23,8 +22,8 @@ export default function InputChangeProcessor() {
   return {
     inputValue,
     handleChange,
-    errorMsg,
     rawApiData,
+    errorMsg,
     textChangeTimeout,
   };
 }

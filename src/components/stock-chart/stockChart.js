@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import apiCaller from './stockApiCaller.js';
 import {
   CartesianGrid,
   Legend,
@@ -29,8 +30,8 @@ export default function StockChart() {
   const {
     inputValue,
     handleChange,
-    errorMsg,
     rawApiData,
+    errorMsg,
   } = inputChangeProcessor();
   const {
     stocks,
